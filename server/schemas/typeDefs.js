@@ -9,6 +9,7 @@ const typeDefs = gql`
     savedBooks: [Book]
   }
   type Book {
+    _id: ID
     bookId: String!
     authors: [String]
     description: String
@@ -19,6 +20,15 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
+  }
+  
+  type Query {
+    book: [Book]
+    user: User
+  }
+
+  type Mutation {
+    createUser(username: String!, email: String!, password: String!): User
   }`;
 
 module.exports = typeDefs
