@@ -19,10 +19,6 @@ const typeDefs = gql`
   type Auth {
     token: ID!
     user: User
-  }
-  type Mutation {
-    
-  }
-`;
+  }`;
 
 module.exports = typeDefs
